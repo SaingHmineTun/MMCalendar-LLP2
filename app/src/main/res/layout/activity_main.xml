@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#98EDD2"
+    android:paddingHorizontal="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="125dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:text="28"
+        android:textSize="80sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_full_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/tv_day"
+        android:background="@drawable/bg_item"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="28/07/2024"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_day"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp"
+        android:layout_toEndOf="@id/tv_day"
+        android:background="@drawable/bg_item"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="တနင်္ဂနွေ"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_date"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_item"
+        android:padding="8dp"
+        android:text="သာသနာနှစ် ၂၅၆၈ ခု၊ မြန်မာနှစ် ၁၃၈၆ ခု၊ ဝါဆို လဆုတ် ၈ ရ်၊ တနင်္ဂနွေနေ့"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_detail"
+        android:layout_marginTop="16dp"
+        android:weightSum="7">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SUN"
+            android:textColor="#850505"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="MON"
+            android:textColor="#112233"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TUE"
+            android:textColor="#112233"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="WED"
+            android:textColor="#112233"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="THU"
+            android:textColor="#112233"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="FRI"
+            android:textColor="#112233"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SAT"
+            android:textColor="#850505"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/gl_date"
+        android:useDefaultMargins="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_days"
+        android:layout_marginBottom="16dp"
+        android:columnCount="7"
+        android:rowCount="5">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:onClick="onDateClicked"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="onDateClicked"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="onDateClicked"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="onDateClicked"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="onDateClicked"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="onDateClicked"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="onDateClicked"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:onClick="onDateClicked"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:onClick="onDateClicked"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:onClick="onDateClicked"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:onClick="onDateClicked"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:onClick="onDateClicked"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:onClick="onDateClicked"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:onClick="onDateClicked"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:onClick="onDateClicked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:onClick="onDateClicked"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:onClick="onDateClicked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:onClick="onDateClicked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:onClick="onDateClicked"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:onClick="onDateClicked"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:onClick="onDateClicked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:onClick="onDateClicked"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:onClick="onDateClicked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:onClick="onDateClicked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:onClick="onDateClicked"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:onClick="onDateClicked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:onClick="onDateClicked"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:onClick="onDateClicked"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:onClick="onDateClicked"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:onClick="onDateClicked"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:onClick="onDateClicked"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:onClick="onDateClicked"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:onClick="onDateClicked"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:onClick="onDateClicked"
+            android:text="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_item"
+            android:textColor="#112233"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"/>
+    </GridLayout>
+
+</RelativeLayout>
